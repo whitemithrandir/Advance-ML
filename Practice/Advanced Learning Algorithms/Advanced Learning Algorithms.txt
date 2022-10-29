@@ -1,0 +1,9 @@
+Eğer bir ikili sınıflandırma problemi üzerinde çalışılıyorsa, çıktı katmanında sigmoid kullanılır.
+
+Örneğin, yarının hisse senedi fiyatının bugünün hisse senedi fiyatına kıyasla nasıl değişeceğini tahmin etmeye çalışıyorsanız. Pekala, yukarı veya aşağı gidebilir ve bu durumda y pozitif veya negatif olabilen bir sayı olur ve bu durumda doğrusal aktivasyon fonksiyonunu kullanmanızı tavsiye ederim.
+
+örneğin bir evin fiyatını tahmin ediyorsanız, bu asla negatif olamaz, o zaman en doğal seçim ReLU aktivasyon fonksiyonu olacaktır çünkü burada gördüğünüz gibi, bu etkinleştirme işlevi yalnızca sıfır veya pozitif değerler olmak üzere negatif olmayan değerleri alır
+
+Gradyan iniş, makine öğreniminde yaygın olarak kullanılan bir optimizasyon algoritmasıdır ve doğrusal regresyon ve lojistik regresyon ve sinir ağlarının erken uygulamaları gibi birçok algoritmanın temeli olmuştur.
+
+Adam optimizasyon algoritması tipik olarak eğimli inişten çok daha hızlı çalışır ve uygulayıcıların sinir ağlarını nasıl eğittiği konusunda fiili bir standart halindedir. Hangi öğrenme algoritmasının kullanılacağına, sinir ağınızı eğitmek için hangi optimizasyon algoritmasının kullanılacağına karar vermeye çalışılıyorsa. Güvenli bir seçim sadece Adam optimizasyon algoritmasını kullanmak olacaktır.
