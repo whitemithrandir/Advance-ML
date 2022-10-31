@@ -1,4 +1,32 @@
-# Advance-ML
+## Advanced Learning Algorithms
+
+### Neural Network
+    •	Neural Network Layer
+    •	More Complex Neural Networks
+    •	Inference: making predictions (forward propagation) 
+    •	Inference in Code
+    •	Data in Tensorflow
+    •	Building a Neural Network
+    •	Forward prop in a single layer
+    •	Genearal implemantation of forward propagation
+
+### Neural Network Training
+    •	Tensorflow Implementation
+    •	Training Details
+    •	Choosing activation function
+    •	Multiclass
+    •	Softmax
+    •	Neural Network with Softmax output
+    •	Improved implementation of softmax
+    •	Classification with multiple outputs
+    •	Advanced Optimization
+    •	Additional Layer Types
+    
+### Advice For Applying Machine Learning
+    •	Deciding what to try next
+    •	Evaluating a model
+    •	Model selection and training/cross validation/test sets
+
 
 
 ## Refresher on linear regression
