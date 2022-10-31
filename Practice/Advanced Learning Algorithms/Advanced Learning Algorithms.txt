@@ -7,3 +7,12 @@ Eğer bir ikili sınıflandırma problemi üzerinde çalışılıyorsa, çıktı
 Gradyan iniş, makine öğreniminde yaygın olarak kullanılan bir optimizasyon algoritmasıdır ve doğrusal regresyon ve lojistik regresyon ve sinir ağlarının erken uygulamaları gibi birçok algoritmanın temeli olmuştur.
 
 Adam optimizasyon algoritması tipik olarak eğimli inişten çok daha hızlı çalışır ve uygulayıcıların sinir ağlarını nasıl eğittiği konusunda fiili bir standart halindedir. Hangi öğrenme algoritmasının kullanılacağına, sinir ağınızı eğitmek için hangi optimizasyon algoritmasının kullanılacağına karar vermeye çalışılıyorsa. Güvenli bir seçim sadece Adam optimizasyon algoritmasını kullanmak olacaktır.
+
+##
+Advance learning algorithms - evaluating a model
+
+makine öğrenimi sistemlerinin nasıl oluşturulacağına dair bazı tavsiyeler;
+ekiplerin kelimenin tam anlamıyla aylarca daha fazla eğitim örneği toplayarak, daha fazla eğitim verisinin yardımcı olacağını düşünerek harcadıklarını gördüm, ancak bazen çok yardımcı olduğu ve bazen de yaramadığı ortaya çıktı
+Bir makine öğrenimi algoritması oluşturmada etkili olmanın anahtarı, zamanınızı nereye harcayacağınız konusunda iyi seçimler yapmaktır.
+
+Bilgisayar için genellikle yararlı olan niceliklerden biri ve eğitim hatası, albümünüzün eğitim setinde ne kadar iyi çalıştığının bir ölçüsüdür.
