@@ -1,4 +1,42 @@
-# Advance-ML
+### Neural Network
+    •	Neural Network Layer
+    •	More Complex Neural Networks
+    •	Inference: making predictions (forward propagation) 
+    •	Inference in Code
+    •	Data in Tensorflow
+    •	Building a Neural Network
+    •	Forward prop in a single layer
+    •	Genearal implemantation of forward propagation
+
+### Neural Network Training
+    •	Tensorflow Implementation
+    •	Training Details
+    •	Choosing activation function
+    •	Multiclass
+    •	Softmax
+    •	Neural Network with Softmax output
+    •	Improved implementation of softmax
+    •	Classification with multiple outputs
+    •	Advanced Optimization
+    •	Additional Layer Types
+    
+### Advice For Applying Machine Learning
+    •	Deciding what to try next
+    •	Evaluating a model
+    •	Model selection and training/cross validation/test sets
+    •	Diagnosing bias and variance
+    •	Regularization and bias/variance
+    •	Learning curves
+    •	Deciding what to try next revisited
+    •	Bias/variance and neural networks
+    •	Iterative loop of ML development
+    •	Error analysis
+    •	Adding data
+    •	Transfer learning: using data from a different task
+    •	Full cycle of a machine learning project
+    •	Fairness, bias, and ethics
+    •	Error metrics for skewed datasets
+    •	Trading off precision and recall
 
 
 ## Refresher on linear regression
