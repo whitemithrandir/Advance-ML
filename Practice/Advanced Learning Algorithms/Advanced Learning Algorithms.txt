@@ -1,18 +1,77 @@
 Eğer bir ikili sınıflandırma problemi üzerinde çalışılıyorsa, çıktı katmanında sigmoid kullanılır.
 
-Örneğin, yarının hisse senedi fiyatının bugünün hisse senedi fiyatına kıyasla nasıl değişeceğini tahmin etmeye çalışıyorsanız. Pekala, yukarı veya aşağı gidebilir ve bu durumda y pozitif veya negatif olabilen bir sayı olur ve bu durumda doğrusal aktivasyon fonksiyonunu kullanmanızı tavsiye ederim.
+Örneğin, yarının hisse senedi fiyatının bugünün hisse senedi fiyatına kıyasla nasıl değişeceğini tahmin etmeye çalışıyorsanız.
+Pekala, yukarı veya aşağı gidebilir ve bu durumda y pozitif veya negatif olabilen bir sayı olur ve bu durumda
+doğrusal aktivasyon fonksiyonunu kullanmanızı tavsiye ederim.
 
-örneğin bir evin fiyatını tahmin ediyorsanız, bu asla negatif olamaz, o zaman en doğal seçim ReLU aktivasyon fonksiyonu olacaktır çünkü burada gördüğünüz gibi, bu etkinleştirme işlevi yalnızca sıfır veya pozitif değerler olmak üzere negatif olmayan değerleri alır
+örneğin bir evin fiyatını tahmin ediyorsanız, bu asla negatif olamaz, o zaman en doğal seçim ReLU aktivasyon fonksiyonu
+olacaktır çünkü burada gördüğünüz gibi, bu etkinleştirme işlevi yalnızca sıfır veya pozitif değerler olmak üzere negatif
+olmayan değerleri alır
 
-Gradyan iniş, makine öğreniminde yaygın olarak kullanılan bir optimizasyon algoritmasıdır ve doğrusal regresyon ve lojistik regresyon ve sinir ağlarının erken uygulamaları gibi birçok algoritmanın temeli olmuştur.
+Gradyan iniş, makine öğreniminde yaygın olarak kullanılan bir optimizasyon algoritmasıdır ve doğrusal regresyon ve
+lojistik regresyon
+ve sinir ağlarının erken uygulamaları gibi birçok algoritmanın temeli olmuştur.
 
-Adam optimizasyon algoritması tipik olarak eğimli inişten çok daha hızlı çalışır ve uygulayıcıların sinir ağlarını nasıl eğittiği konusunda fiili bir standart halindedir. Hangi öğrenme algoritmasının kullanılacağına, sinir ağınızı eğitmek için hangi optimizasyon algoritmasının kullanılacağına karar vermeye çalışılıyorsa. Güvenli bir seçim sadece Adam optimizasyon algoritmasını kullanmak olacaktır.
+Adam optimizasyon algoritması tipik olarak eğimli inişten çok daha hızlı çalışır ve uygulayıcıların sinir ağlarını nasıl
+eğittiği
+konusunda fiili bir standart halindedir. Hangi öğrenme algoritmasının kullanılacağına, sinir ağınızı eğitmek için hangi
+optimizasyon
+algoritmasının kullanılacağına karar vermeye çalışılıyorsa. Güvenli bir seçim sadece Adam optimizasyon algoritmasını
+kullanmak olacaktır.
 
-##
-Advance learning algorithms - evaluating a model
-
+##Evaluating a model
 makine öğrenimi sistemlerinin nasıl oluşturulacağına dair bazı tavsiyeler;
-ekiplerin kelimenin tam anlamıyla aylarca daha fazla eğitim örneği toplayarak, daha fazla eğitim verisinin yardımcı olacağını düşünerek harcadıklarını gördüm, ancak bazen çok yardımcı olduğu ve bazen de yaramadığı ortaya çıktı
-Bir makine öğrenimi algoritması oluşturmada etkili olmanın anahtarı, zamanınızı nereye harcayacağınız konusunda iyi seçimler yapmaktır.
+ekiplerin kelimenin tam anlamıyla aylarca daha fazla eğitim örneği toplayarak, daha fazla eğitim verisinin yardımcı
+olacağını
+düşünerek harcadıklarını gördüm, ancak bazen çok yardımcı olduğu ve bazen de yaramadığı ortaya çıktı
+Bir makine öğrenimi algoritması oluşturmada etkili olmanın anahtarı, zamanınızı nereye harcayacağınız konusunda iyi
+seçimler yapmaktır.
+Bilgisayar için genellikle yararlı olan niceliklerden biri ve eğitim hatası, albümünüzün eğitim setinde ne kadar
+iyi çalıştığının
+bir ölçüsüdür.
 
-Bilgisayar için genellikle yararlı olan niceliklerden biri ve eğitim hatası, albümünüzün eğitim setinde ne kadar iyi çalıştığının bir ölçüsüdür.
+## Diagnosing bias and variance
+Makine öğrenimi sistemi oluşturma sürecinin anahtarı, performansını artırmak için bir sonraki adımda ne yapılacağına
+nasıl karar
+verileceğidir. Bir öğrenme algoritmasının önyargı ve varyansına bakmanın, bir sonraki denemeniz konusunda size çok iyi
+rehberlik sağlar.
+algoritmanızın yüksek önyargı veya yüksek varyansa sahip olup olmadığını teşhis etmenin veya bulmanın sistematik bir yolu,
+algoritmanızın eğitim setindeki ve çapraz doğrulama setindeki performansına bakmak olacaktır
+Yüksek varyansın temel göstergesi, J_cv'nin J treninden çok daha büyük olması durumunda olacak olsa da,
+matematikte işaretten iki kat daha büyüktür, bu nedenle bu daha büyüktür ve bu çok daha büyük anlamına gelir.
+Çizimin bu en sağdaki kısmı, J_cv'nin J treninden çok daha büyük olduğu yerdir. Genellikle J katarı oldukça düşük olacaktır,
+ancak temel gösterge J_cv'nin J katarından çok daha büyük olup olmadığıdır
+
+## Regularization and bias/variance
+algoritmanız için düzenleme parametresinin iyi bir Lambda değerini seçmek istediğinizde yardımcı olacaktır
+Burada Lambda değeri, eğitim verilerini iyi uydurmaya karşı w parametrelerini küçük tutmaktan ne kadar ödün verdiğinizi
+kontrol eden düzenleme parametresidir
+yüksek lambda yüksek bias demektir. Lambda 0 olursa overfit olur. İdeal bir aralıkta seçmek gerekir
+Normalleştirme parametresi için kullanılacak iyi bir Lambda değerinin ne olduğuna karar vermeye çalışıyorsanız, çapraz 
+doğrulama size bunu yapmanın bir yolunu da sunar
+Algoritmanın en iyi performansı göstermesine neden olan bazı ara Lambda değerleri olacaktır. Çapraz doğrulamanın yaptığı şey,
+Lambda'nın birçok farklı değerini denemektir
+Lambda düzenleme parametresinin seçimi, algoritmanızın önyargısını ve varyansını ve genel performansını etkiler ve ayrıca
+Lambda düzenleme parametresi için iyi bir seçim yapmak üzere çapraz doğrulama kullanılabilir.
+
+## Learning curves
+Eğitim seti boyutu büyüdükçe, eğitim seti hatası aslında artar.
+bir öğrenme algoritmasının yüksek önyargıya sahip olması durumunda, daha fazla eğitim verisi elde etmenin tek başına
+o kadar fazla umut vermeyeceği sonucuna varıyor, belki biraz şaşırtıcı. Daha fazla veriye sahip olmanın iyi olduğunu
+düşünmeye alıştığımızı biliyorum, ancak algoritmanız yüksek önyargıya sahipse, yaptığınız tek şey daha fazla eğitim
+verisi eklemekse, bu tek başına hatayı azaltmanıza asla izin vermez. bu kadar değerlendir. Gerçekten bu nedenle,
+bu şekle ne kadar çok örnek eklerseniz ekleyin, düz doğrusal uydurma o kadar iyi olmayacak. Bu nedenle, daha fazla
+eğitim verisi toplamak için çok çaba harcamadan önce, öğrenme algoritmanızın yüksek önyargıya sahip olup olmadığını
+kontrol etmeye değer, çünkü varsa, muhtemelen daha fazla eğitim verisi eklemekten başka şeyler yapmanız gerekir.
+Varyansınız yüksek olduğunda, eğitim kümesi boyutunu artırmak çok yardımcı olabilir ve özellikle, bu eğrileri sağa doğru
+tahmin edebilirsek, M katını artırabilirsek, eğitim hatası artmaya devam eder, ancak sonra çapraz- doğrulama hatası umarım
+aşağı inecek ve J trenine yaklaşacaktır. Dolayısıyla bu senaryoda, çapraz doğrulama hatasını azaltmak ve algoritmanızın
+daha iyi ve daha iyi performans göstermesini sağlamak için yalnızca eğitim seti boyutunu artırarak mümkün olabilir ve bu,
+yüksek önyargı durumundan farklıdır, burada yaptığınız tek şey Algoritma performansınızı çok fazla öğrenmenize yardımcı
+olmayacak daha fazla eğitim verisi elde etmektir. Özetlemek gerekirse, bir öğrenme algoritması yüksek varyanstan muzdaripse,
+o zaman daha fazla eğitim verisi elde etmek gerçekten yardımcı olacaktır.
+
+## Deciding what to try next revisited
+Öğrenme algoritmanızın yüksek önyargılı mı yoksa yüksek varyanslı mı olduğunu anlamaya çalışabilirsiniz.
+Bu, bir öğrenme algoritması eğitirken rutin olarak yaptığım prosedürdür, algoritmamın yüksek önyargı veya
+yüksek varyansa sahip olup olmadığına karar vermeye çalışmak için eğitim hatasına ve çapraz doğrulama hatasına daha sık bakarım.
