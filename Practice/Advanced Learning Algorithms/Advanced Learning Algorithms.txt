@@ -112,4 +112,27 @@ Dolayısıyla, Jcv ve Jtrain'deki bu büyük boşluk, muhtemelen yüksek bir var
 yüksek bir varyans sorununuz varsa, bunu düzeltmenin bir yolu daha fazla veri elde etmektir.
 Daha fazla veri almak ve geri dönüp modeli yeniden eğitmek ve iki kez kontrol etmek
 
-## Iterative loop of ML development
+## Error analysis
+Öğrenme algoritması performansınızı iyileştirmek için bir sonraki denemeyi seçmek için tanılama çalıştırmanıza yardımcı olacak
+en önemli yollar açısından, yanlılık ve varyansın muhtemelen en önemli fikir olduğunu ve hata analizinin muhtemelen listemde ikinci
+olacağını söyleyebilirim.
+Örneğin, yanlış sınıflandırılmış spam e-postalarının birçoğunun ilaç satışı olduğunu, ilaç veya ilaç satmaya çalıştığını
+fark ederseniz, aslında bu örnekleri inceleyeceğim ve bu sınıflandırmadaki kaç e-postanın farmasötik spam olduğunu elle
+karşılayacağım ve orada olduğunu söyleyeceğim.
+istenmeyen e-postaları bulmak için algoritmalar oluşturmak için çok zaman harcadım, ancak çok sonra net etkinin aslında
+oldukça küçük olduğunu fark ettim. Bu, kasıtlı yazım yanlışlarını bulmaya çalışmak için çok zaman harcamadan önce daha dikkatli
+hata analizi yapmayı dilediğim bir örnek
+Bu analizden sonra, birçok hatanın farmasötik spam e-postaları olduğunu fark ederseniz, bu size daha sonra yapılacak şeyler
+için bazı fikirler veya ilham verebilir. Örneğin, her şeyden daha fazla veri değil de daha fazla veri toplamaya karar
+verebilirsiniz, ancak öğrenme algoritmasının bu farmasötik istenmeyen postaları tanımada daha iyi bir iş çıkarabilmesi için
+farmasötik spam e-postalarına ilişkin daha fazla veri bulmaya çalışabilirsiniz. Veya satmaya çalıştığınız standartların belirli
+ilaç adlarını veya farmasötik ürünlerin belirli adlarını söylemekle ilgili bazı yeni özellikler bulmaya karar verebilirsiniz
+öğrenme algoritmanızın onları tanıma konusunda daha iyi bir iş çıkarmasına yardımcı olmak için özellikle kimlik avı e-postalarından
+daha fazla veri almaya karar verebilirsiniz.
+Genel olarak, hem sapma varyansı teşhisini hem de bu tür hata analizini gerçekleştirmenin taramaya veya modelde hangi
+değişikliklerin bir sonraki denemede daha umut verici olduğuna karar vermeye gerçekten yardımcı olduğunu buldum.
+Şimdi hata analizinin bir sınırlaması, insanların iyi olduğu problemler için bunu yapmanın çok daha kolay olmasıdır.
+Özetle hata analizinde ayıklamak yerine spam olduğunu bildiğin verilerle eğitmek zamandan daha çok kazandırır.
+
+
+
