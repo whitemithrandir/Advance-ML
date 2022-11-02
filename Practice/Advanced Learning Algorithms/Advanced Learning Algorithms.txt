@@ -75,3 +75,41 @@ o zaman daha fazla eğitim verisi elde etmek gerçekten yardımcı olacaktır.
 Öğrenme algoritmanızın yüksek önyargılı mı yoksa yüksek varyanslı mı olduğunu anlamaya çalışabilirsiniz.
 Bu, bir öğrenme algoritması eğitirken rutin olarak yaptığım prosedürdür, algoritmamın yüksek önyargı veya
 yüksek varyansa sahip olup olmadığına karar vermeye çalışmak için eğitim hatasına ve çapraz doğrulama hatasına daha sık bakarım.
+
+## Deciding what to try next revisited
+algoritmanız yüksek yanlılığa sahipse, o zaman yaptığımız tek şey daha fazla eğitim verisi almaksa, bu muhtemelen tek başına
+o kadar da yardımcı olmaz. Ancak bunun aksine, algoritmanız yüksek varyansa sahipse, diyelim ki çok küçük bir eğitim setine
+fazla uyuyorsa, o zaman daha fazla eğitim örneği almak çok yardımcı olacaktır
+öğrenme algoritmanızın çok fazla özelliği varsa, algoritmanıza çok karmaşık modellere uyması için çok fazla esneklik sağlar.
+Bu biraz x, x squared, x cubed, x^4, x^5, vb. gibi. Bunlardan sadece birkaçını ortadan kaldırsaydınız, modeliniz
+çok karmaşık olmayacak ve bu kadar yüksek varyansa sahip olmayacaktı.
+Lambdayı arttırmak overfit(high variance) problemini çözer.
+Lambdayı azaltmak bias problemini çözer.
+algoritmanızın yüksek varyansa sahip olduğunu tespit ederseniz, bunu düzeltmenin iki ana yolu;
+ne daha fazla eğitim verisi alın ne de modelinizi basitleştirin. Modeli basitleştirerek demek istediğim,
+ya daha küçük bir dizi özellik elde edin ya da Lambda düzenleme parametresini artırın. Algoritmanızın çok karmaşık,
+çok hareketli eğrilere uyma esnekliği daha azdır. Tersine, algoritmanız yüksek önyargıya sahipse,
+bu eğitim setinde bile iyi gitmiyor demektir. Durum buysa, ana düzeltmeler, modelinizi daha güçlü hale getirmek
+veya onlara daha karmaşık veya daha fazla işleve uymaları için daha fazla esneklik kazandırmaktır.
+Bunu yapmanın bazı yolları, ona ek özellikler vermek veya bu polinom özelliklerini eklemek veya
+Lambda düzenleme parametresini azaltmaktır.
+eğitim seti boyutunu küçülterek yüksek önyargıyı düzeltmeniz gerekip gerekmediğini merak ediyorsanız,
+bu aslında yardımcı olmuyor. Eğitim seti boyutunu küçültürseniz, eğitim setine daha iyi uyarsınız, ancak bu,
+çapraz doğrulama hatanızı ve öğrenme algoritmanızın performansını kötüleştirme eğilimindedir, bu nedenle,
+yalnızca yüksek bir değeri düzeltmeye çalışmak için eğitim örneklerini rastgele atmayın
+
+## Bias/variance and neural networks
+eğer sinir ağınızı yeterince genişletirseniz, neredeyse her zaman eğitim setinize iyi uyum sağlayabilirsiniz.
+Eğitim setiniz çok büyük olmadığı sürece. Ve bunun anlamı, ikisi arasında gerçekten değiş tokuş yapmaya gerek kalmadan
+önyargıyı azaltmaya veya varyansı gerektiği gibi azaltmaya çalışmak için bize yeni bir reçete veriyor.
+önyargıyı azaltmanın bir yolu, sadece daha büyük bir sinir ağı kullanmaktır ve daha büyük sinir ağı ile,
+katman başına daha fazla gizli katman veya daha fazla gizli birim demek istiyorum. Ve daha sonra bu döngüden geçmeye devam edebilir
+ve sinir ağınızı eğitim setinde başarılı olana kadar daha da büyütebilirsiniz
+Eğitim setine düştükten sonra, bu sorunun cevabı evet. Daha sonra, trans doğrulama setinde iyi sonuç vermediğini sorarsınız.
+Tekrar eğittikten sonra;
+algoritmanın yüksek varyansa sahip olduğu sonucuna varabilirsiniz çünkü çapraz doğrulama setinde set eğitmek istemiyor.
+Dolayısıyla, Jcv ve Jtrain'deki bu büyük boşluk, muhtemelen yüksek bir varyans sorununuz olduğunu gösterir ve
+yüksek bir varyans sorununuz varsa, bunu düzeltmenin bir yolu daha fazla veri elde etmektir.
+Daha fazla veri almak ve geri dönüp modeli yeniden eğitmek ve iki kez kontrol etmek
+
+## Iterative loop of ML development
