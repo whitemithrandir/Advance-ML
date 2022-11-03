@@ -183,5 +183,17 @@ sistematik olarak nasıl oluşturulacağı ve dağıtılacağı ve sürdürülec
 olduğundan, iyi ölçeklendiğinden, iyi yasalara sahip olduğundan, izlendiğinden emin olmak için tüm bunları yapmak için ve
 ardından, modelin iyi çalışmasını sağlamak için uygun şekilde güncellemeler yapma fırsatınız olur.
 
+## Error metrics for skewed datasets
+Çarpık veri kümeleriyle ilgili sorunlar üzerinde çalışırken, öğrenme algoritmanızın ne kadar iyi çalıştığını anlamak için
+genellikle sınıflandırma hatası yerine farklı bir hata metriği kullanırız.
+bu dört hücreye isim vereceğim. Gerçek sınıf bir ve tahmin edilen sınıf bir olduğunda, buna gerçek pozitif diyeceğiz çünkü
+siz pozitif tahmin ettiniz ve bu doğruydu, pozitif bir örnek var. Sağ alttaki bu hücrede, gerçek sınıfın sıfır ve tahmin edilen
+sınıfın sıfır olduğu yerde, buna gerçek bir negatif diyeceğiz çünkü siz negatif tahmin ettiniz ve bu doğruydu. Gerçekten olumsuz
+bir örnekti. Sağ üstteki bu hücreye yanlış pozitif denir, çünkü algoritma pozitif tahmin eder, ancak yanlıştır. Aslında pozitif
+değil, bu yüzden buna yanlış pozitif denir. Algoritma sıfır öngördüğü için bu hücreye yanlış negatif sayısı denir, ancak yanlıştı.
 
+## Trading off precision and recall
+Doğruluk (Accuracy) yerine F1 Score değerinin kullanılmasının en temel sebebi eşit dağılmayan veri kümelerinde hatalı bir model
+seçimi yapmamaktır. Ayrıca sadece False Negative ya da False Positive değil tüm hata maliyetlerini de içerecek bir ölçme metriğine
+ihtiyaç duyulduğu içinde F1 Score bizim için çok önemlidir.
 
