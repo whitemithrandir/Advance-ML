@@ -134,5 +134,54 @@ değişikliklerin bir sonraki denemede daha umut verici olduğuna karar vermeye 
 Şimdi hata analizinin bir sınırlaması, insanların iyi olduğu problemler için bunu yapmanın çok daha kolay olmasıdır.
 Özetle hata analizinde ayıklamak yerine spam olduğunu bildiğin verilerle eğitmek zamandan daha çok kazandırır.
 
+## Adding data
+Makine öğrenimi algoritmalarını eğitirken, neredeyse her zaman daha fazla veriye sahip olmayı dilemişiz gibi geliyor.
+Ve bu yüzden bazen her şey hakkında daha fazla veri elde etmemize izin vermek cazip geliyor. Ancak her türden daha fazla veri
+elde etmeye çalışmak yavaş ve pahalı olabilir. Bunun yerine, veri eklemenin alternatif bir yolu, analizin yardımcı olabileceğini
+belirttiği türlerden daha fazla veri eklemeye odaklanmak olabilir. Önceki slaytta, hata analizinin ilaç spam'inin büyük bir
+sorun olduğunu gözden geçirip geçirmediğini gördük, o zaman güneş altında her şeyi daha fazla veri almak için değil, daha fazla
+farmasötik spam örneği almaya odaklanmak için daha hedefli bir çaba göstermeye karar verebilirsiniz. daha mütevazı bir maliyet bu
+çok fazla etiketlenmemiş e-posta veriniz varsa, etrafta dolaşan e-postalar varsa ve henüz kimsenin spam veya spam olmayan
+olarak etiketleme zahmetine girmediğini varsayalım. etiketlenmemiş veriler aracılığıyla ve özellikle ilaçla ilgili bir spam
+ile ilgili daha fazla örnek bulun. Ve bu, öğrenme algoritması performansınızı, her türden e-postadan daha fazla veri eklemeye
+çalışmaktan çok daha fazla artırabilir.
+ses eklemek için arka plan gürültüsü veya kötü cep telefonu bağlantısı, burada test setinde beklediğinizi temsil ediyorsa, bu,
+ses verilerinizde veri artırmayı gerçekleştirmenin yararlı yolları olacaktır. Aksine, verilere tamamen rastgele anlamsız gürültüde
+genellikle o kadar yardımcı olmaz.
+daha fazla veri toplamaktan herhangi bir şey olabilir. Eğer hata analizi bunu yapmanızı söylediyse. Daha fazla görüntü veya daha
+fazla ses oluşturmak için veri büyütmeyi kullanmak veya sadece daha fazla eğitim örneği oluşturmak için veri sentezini kullanmak.
+Ve bazen verilere odaklanmak, öğrenme algoritmanızın performansını iyileştirmesine yardımcı olmanın etkili bir yolu olabilir.
+
+## Transfer learning: using data from a different task
+Çok fazla veriye sahip olmadığınız bir uygulama için, transfer öğrenimi, uygulamanıza yardımcı olması için farklı bir görevdeki
+verileri kullanmanıza izin veren harika bir tekniktir.
+büyük bir eğitim setiniz varsa transfer öğrenme biraz daha iyi çalışabilir.
+Transfer öğrenimi ile ilgili güzel bir şey de, belki de denetimli ön eğitimi gerçekleştiren kişi olmanıza gerek olmamasıdır.
+Birçok sinir ağı için, zaten büyük bir görüntü üzerinde bir sinir ağını eğitmiş ve internette herkesin indirip kullanması için
+ücretsiz lisanslı eğitimli bir sinir ağları yayınlamış olan araştırmacılar olacaktır.
+Bunun anlamı, ilk adımı kendiniz gerçekleştirmek yerine, bir başkasının haftalarca eğitim almış olabileceği sinir ağını
+indirebilir ve ardından çıktı katmanını kendi çıktı katmanınızla değiştirebilir ve ince ayar yapmak için Seçenek 1 veya
+Seçenek 2'yi gerçekleştirebilirsiniz.
+Adım 1, uygulamanızla aynı giriş tipine sahip büyük bir veri kümesinde önceden eğitilmiş parametrelere sahip sinir ağını
+indirmektir. Bu giriş türü resimler, ses, metinler veya başka bir şey olabilir ya da sinir ağını indirmek istemiyorsanız,
+belki kendinizinkini eğitebilirsiniz. Ancak pratikte, örneğin görüntüleri kullanıyorsanız, başka birinin önceden eğitilmiş
+sinir ağını indirmek çok daha yaygındır. Ardından ağı kendi verilerinize göre daha fazla eğitin veya ince ayar yapın.
+Büyük veri kümesi üzerinde önceden eğitilmiş bir sinir ağı elde edebilirseniz, diyelim ki bir milyon görüntü, o zaman
+sinir ağına kendi başınıza ince ayar yapmak için bazen çok daha küçük bir veri kümesi, belki bin görüntü, belki daha da küçük
+kullanabileceğinizi buldum. veri ve oldukça iyi sonuçlar elde edin.
+GPT-3'ü, BERT'leri veya ImageNet'i duymadıysanız, duymuş olsanız da bunun için endişelenmeyin. Bunlar, makine öğrenimi
+literatüründe ön eğitimin başarılı uygulamalarıdır.
+Transfer öğrenimini gerçekleştirmenin iki olası yolu nedir?
+Çıktı katmanları ve önceki katmanlar da dahil olmak üzere modelin tüm parametrelerini eğitmeyi seçebilirsiniz.
+Yalnızca çıktı katmanlarının parametrelerini eğitmeyi seçebilir ve modelin diğer parametrelerini sabit bırakabilirsiniz.
+
+
+## Full cycle of a machine learning project
+makine öğrenimi sistemi oluştururken düşünülmesi ve planlanması gereken adımlar nelerdir?
+MLOps adı verilen büyüyen bir alan var. Bu, Makine Öğrenimi İşlemleri anlamına gelir. Bu, makine öğrenimi sistemlerinin
+sistematik olarak nasıl oluşturulacağı ve dağıtılacağı ve sürdürüleceği pratiğini ifade eder. Makine öğrenimi modelinizin güvenilir
+olduğundan, iyi ölçeklendiğinden, iyi yasalara sahip olduğundan, izlendiğinden emin olmak için tüm bunları yapmak için ve
+ardından, modelin iyi çalışmasını sağlamak için uygun şekilde güncellemeler yapma fırsatınız olur.
+
 
 
