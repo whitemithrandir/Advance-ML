@@ -197,3 +197,12 @@ Doğruluk (Accuracy) yerine F1 Score değerinin kullanılmasının en temel sebe
 seçimi yapmamaktır. Ayrıca sadece False Negative ya da False Positive değil tüm hata maliyetlerini de içerecek bir ölçme metriğine
 ihtiyaç duyulduğu içinde F1 Score bizim için çok önemlidir.
 
+## Decision tree model
+## Learning Process
+Karar ağacı öğrenmenin ilk adımı, kök düğümde hangi özelliğin kullanılacağına karar vermemizdir.
+Bu, karar ağacının en üstündeki ilk düğümdür.
+Bir karar ağacını öğrenirken vermemiz gereken ilk karar, hangi özelliği, salonu ve her bir düğümü nasıl
+seçeceğimizdir. Bir karar ağacı oluştururken vermeniz gereken ikinci önemli karar, bölmeyi ne zaman
+durduracağınıza karar vermektir
+
+
