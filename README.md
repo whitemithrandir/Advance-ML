@@ -37,6 +37,22 @@
     •	Fairness, bias, and ethics
     •	Error metrics for skewed datasets
     •	Trading off precision and recall
+    
+    
+### Decision Trees 
+    •	Decision tree model
+    •	Learning Process
+    •	Measuring purity
+    •	Choosing a split: Information Gain
+    •	Putting it together
+    •	Using one-hot encoding of categorical features
+    •	Continuous valued features
+    •	Regression Trees
+    •	Using multiple decision trees
+    •	Sampling with replacement
+    •	Random forest algorithm
+    •	XGBoost
+    •	When to use decision trees
 
 
 ## Refresher on linear regression
