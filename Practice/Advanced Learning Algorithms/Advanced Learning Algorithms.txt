@@ -229,3 +229,5 @@ sol ve sağ alt dallarda başka daha küçük karar ağaçları oluşturmaktır.
 kod yazmak anlamına gelir. Bunun bir karar ağacı oluştururken ortaya çıkma şekli, daha küçük alt karar ağaçları oluşturarak
 ve ardından hepsini bir araya getirerek genel karar ağacını oluşturmanızdır.
 
+## Continuous valued features
+
