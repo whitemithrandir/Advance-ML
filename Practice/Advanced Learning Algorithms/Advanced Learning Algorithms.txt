@@ -205,4 +205,27 @@ Bir karar ağacını öğrenirken vermemiz gereken ilk karar, hangi özelliği, 
 seçeceğimizdir. Bir karar ağacı oluştururken vermeniz gereken ikinci önemli karar, bölmeyi ne zaman
 durduracağınıza karar vermektir
 
+## Measuring purity
+entropi işlevi, bir dizi verinin safsızlığının bir ölçüsüdür. Sıfırdan başlar, bire çıkar ve sonra numunenizdeki pozitif örneklerin kesrinin bir fonksiyonu olarak sıfıra geri döner. Buna benzeyen başka fonksiyonlar da var, sıfırdan bire gidiyorlar ve sonra geri düşüyorlar.
+
+## Choosing a split: Information Gain
+Bir karar ağacı oluştururken, bir düğümde hangi özelliğin bölüneceğine karar verme şeklimiz, hangi özellik seçiminin entropiyi en çok azalttığına bağlı olacaktır. Entropiyi azaltır veya safsızlığı azaltır veya saflığı en üst düzeye çıkarır. Karar ağacı öğrenmede entropinin azaltılmasına bilgi kazancı denir.
+
+## Putting it together
+Bilgi kazanım kriterleri, tek düğümü bölmek için bir özelliğin nasıl seçileceğine karar vermenizi sağlar
+Ağacın kök düğümündeki tüm eğitim örnekleriyle başlar ve tüm olası özellikler için bilgi kazancını hesaplar ve
+en yüksek bilgi kazancını veren bölünecek özelliği seçer. Bu özelliği seçtikten sonra, veri kümesini seçilen özelliğe
+göre iki alt kümeye ayıracak ve ağacın sol ve sağ dallarını oluşturacak ve bu özelliğin değerine göre eğitim örneklerini
+sol veya sağ dala göndereceksiniz.
+Bu, kök düğümde bir bölme yapmanızı sağlar. Bundan sonra, ağacın sol dalında, sağ dalında vb. bölme işlemini tekrarlamaya
+devam edeceksiniz. Durdurma kriterleri karşılanana kadar bunu yapmaya devam edin. Durdurma kriterinin olabileceği durumlarda,
+bir düğüm yüzde 100 tek bir tümce olduğunda, birisi entropiye sıfıra ulaştıysa veya bir düğümü daha fazla bölmek ağacın
+belirlediğiniz maksimum derinliği aşmasına neden olacaksa veya ek bir bölünme eşikten daha azsa veya bir düğümdeki örnek sayısı
+bir eşiğin altındaysa. Bu kriterlerden biri veya birkaçı olabilecek, seçtiğiniz durdurma kriteri karşılanana kadar bölme
+işlemini tekrarlamaya devam edeceksiniz.
+Doğru alt ağacı oluşturma yöntemimiz, yine beş örnekten oluşan bir alt küme üzerinde bir karar ağacı oluşturmaktı.
+Bilgisayar biliminde bu, özyinelemeli bir algoritma örneğidir. Bunun anlamı, kökte bir karar ağacı oluşturmanın yolu,
+sol ve sağ alt dallarda başka daha küçük karar ağaçları oluşturmaktır. Bilgisayar biliminde özyineleme, kendini çağıran
+kod yazmak anlamına gelir. Bunun bir karar ağacı oluştururken ortaya çıkma şekli, daha küçük alt karar ağaçları oluşturarak
+ve ardından hepsini bir araya getirerek genel karar ağacını oluşturmanızdır.
 
