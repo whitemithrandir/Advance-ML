@@ -1,0 +1,11 @@
+## What is clustering?
+
+Bir kümeleme algoritması, bir dizi veri noktasına bakar ve birbiriyle ilişkili veya birbirine benzeyen veri noktalarını otomatik olarak bulur.
+denetimsiz öğrenmede, size yalnızca x içeren bir veri kümesi verilir, ancak etiketler veya y hedef etiketleri verilmez. Bu nedenle, bir veri kümesini çizdiğimde, x'ler ve o'lar ile gösterilen iki sınıf yerine sadece noktalarla şuna benziyor.
+
+## K-means intuition
+K-araç algoritmasının yaptığı ilk şey, bulmasını isteyebileceğiniz iki kümenin merkezlerinin nerede olabileceğine dair rastgele bir tahmin yapmasıdır.
+
+## K-means algorithm
+
+## Optimization objective
