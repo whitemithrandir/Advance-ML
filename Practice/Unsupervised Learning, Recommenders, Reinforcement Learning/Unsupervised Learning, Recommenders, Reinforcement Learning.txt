@@ -9,3 +9,6 @@ K-araç algoritmasının yaptığı ilk şey, bulmasını isteyebileceğiniz iki
 ## K-means algorithm
 
 ## Optimization objective
+
+## Initializing K-means
+kümelerin ağırlık merkezlerini başlatmanın çok daha yaygın olarak kullanılan bir yoludur.
