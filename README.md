@@ -1,3 +1,8 @@
+Araştıran, sorgulayan, üreten bir zihniyetle sorunlara değil çözümlere odaklanıyorum. İşimi bir sonraki seviyeye taşımak için yeteneklerimi, becerilerimi ve hayallerimi kullanıyorum. Makine öğrenmesi alanında çalışıyor tensorflow aracı üzerine uzmanlaşıyorum, yeteneklerimi keşfetmeye ve becerilerimi geliştirmeye çalışıyorum, makine öğrenmesi ile çalışmaktan mutluyum, zevkle çalışıyorum. Okurken bilmediğim şeyler olduğunu görüyorum ama bu beni korkutmuyor!
+İşinizi bir sonraki seviyeye taşımak için yeteneklerimi, becerilerimi ve hayallerimi kullanıyorum. 
+
+Makine öğreniminde birçok hizmet aracı kullanılır; Google tarafından geliştirilen tensorflow üzerinde çalışıyorum, Doğal Dil İşleme ve Zaman Serilerinde uzmanlaşma yolundayım.
+
 ## Advanced Learning Algorithms
 
 ### Neural Network
