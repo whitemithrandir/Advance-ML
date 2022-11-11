@@ -12,3 +12,8 @@ K-araç algoritmasının yaptığı ilk şey, bulmasını isteyebileceğiniz iki
 
 ## Initializing K-means
 kümelerin ağırlık merkezlerini başlatmanın çok daha yaygın olarak kullanılan bir yoludur.
+
+## Finding unusual events
+Anormallik tespitini gerçekleştirmenin en yaygın yolu, yoğunluk tahmini adı verilen bir tekniktir. Bunun anlamı, size bu m örnekten oluşan eğitim setleriniz verildiğinde, yaptığınız ilk şey, x olasılığı için bir model oluşturmaktır. Başka bir deyişle, öğrenme algoritması, x1 ve x2 özelliklerinin yüksek olasılığa sahip değerlerinin neler olduğunu ve veri kümesinde görülme olasılığı daha düşük veya daha düşük bir olasılık veya daha düşük olasılıklı değerlerin neler olduğunu bulmaya çalışacaktır.
+Anonim algılama albümlerinin çalışması için, x verisini modellemek için bir Gauss dağılımı kullanmamız gerekecek. O halde Gauss dağılımları hakkında konuşmak için bir sonraki videoya geçelim.
+Ama eğer bu yeni uçak motorunun bir ısı ve titreşim imzası varsa, yani burada ta aşağısında, bu veri noktası bir zamanlar yukarıda gördüğümüzden çok farklı görünüyor. Ve muhtemelen diyeceğiz ki, oğlum, bu bir anormallik gibi görünüyor. bu görünmüyor
