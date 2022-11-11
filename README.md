@@ -1,3 +1,71 @@
+## Collaborative Filtering RecSys
+#### Exercise 1
+    ### START CODE HERE ###  
+    for j in range(nu):
+        w = W[j,:]
+        b_j = b[0,j]
+        for i in range(nm):
+            x = X[i,:]
+            y = Y[i,j]
+            r = R[i,j]
+            J += r * np.square((np.dot(w,x) + b_j - y ))
+    J += (lambda_) * (np.sum(np.square(W)) + np.sum(np.square(X)))
+    J = J/2
+    ### END CODE HERE ### 
+    
+    
+
+
+## Deep Learning for Content-Based Filtering
+#### Exercise 1
+    ### START CODE HERE ###     
+    d = sum(np.square(a-b))
+    ### END CODE HERE ###  
+    
+    
+## Deep Q-Learning - Lunar Lander   
+#### Exercise 1    
+     ### START CODE HERE ### 
+    Input(shape=state_size),                      
+    Dense(units=64, activation='relu'),            
+    Dense(units=64, activation='relu'),            
+    Dense(units=num_actions, activation='linear'),
+    ### END CODE HERE ### 
+    ])
+
+# Create the target Q^-Network
+target_q_network = Sequential([
+    ### START CODE HERE ### 
+    Input(shape=state_size),                      
+    Dense(units=64, activation='relu'),            
+    Dense(units=64, activation='relu'),            
+    Dense(units=num_actions, activation='linear'),
+    ### END CODE HERE ###
+    ])
+
+### START CODE HERE ### 
+optimizer = Adam(learning_rate=ALPHA)
+### END CODE HERE ###
+
+
+#### Exercise 2
+    ### START CODE HERE ### 
+    y_targets = rewards + (gamma * max_qsa * (1 - done_vals))
+    ### END CODE HERE ###
+    
+    # Get the q_values
+    q_values = q_network(states)
+    q_values = tf.gather_nd(q_values, tf.stack([tf.range(q_values.shape[0]),
+                                                tf.cast(actions, tf.int32)], axis=1))
+        
+    # Compute the loss
+    ### START CODE HERE ### 
+    loss = MSE(y_targets, q_values)
+    ### END CODE HERE ###    
+
+
+
+
 ## Advanced Learning Algorithms
 
 ### Neural Network
