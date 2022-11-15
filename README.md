@@ -1,3 +1,11 @@
+I just finished the updated and expanded version of Andrew Ng’s pioneering Machine Learning Specialization course.
+
+It's so satisfying to be able to learn from someone who I admire and respect so much while having a great time doing it. Andrew Ng has the ability of making such complex concepts easy to digest and fun to play with.
+
+This "thank you" note was part of his final message at the end of the course and I just want to say it back. Thank you!
+
+#machinelearning #deeplearning #deeplearningai #stanforduniversity #coursera #andrewng 
+
 ## Collaborative Filtering RecSys
 #### Exercise 1
     ### START CODE HERE ###  
